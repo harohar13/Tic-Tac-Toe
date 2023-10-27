@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Permanent+Marker&family=Young+Serif&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: rgb(201, 13, 107);
+    --winning-blocks: #2d414b;
+}
+
+body {
+    color: var(--red);
+    font-family: 'Finger Paint', cursive;
+}
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+
+
+#gameContainer {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #37505C;
+}
+
+#cellContainer {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.cell {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.cell:nth-child(3n) {
+    border-right: none;
+}
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
+} 
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(219, 14, 151);
+    color: #37505C;
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
+    font-family: Permanent Marker;
+    
+}
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
